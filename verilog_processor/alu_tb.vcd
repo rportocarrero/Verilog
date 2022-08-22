@@ -1,0 +1,154 @@
+$date
+	Sat Oct  9 06:41:15 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module alu_tb $end
+$var wire 16 ! alu_bus [15:0] $end
+$var wire 1 " alu_zero $end
+$var reg 16 # alu_reg [15:0] $end
+$var reg 1 $ alu_valid $end
+$var reg 1 % clk $end
+$var reg 1 & nrst $end
+$var reg 8 ' opcode [7:0] $end
+$scope module DUT $end
+$var wire 16 ( alu_bus [15:0] $end
+$var wire 8 ) alu_op [7:0] $end
+$var wire 1 $ alu_valid $end
+$var wire 1 % clk $end
+$var wire 1 & nrst $end
+$var reg 16 * acc [15:0] $end
+$var reg 16 + alu_reg [15:0] $end
+$var reg 1 " alu_zero $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx +
+bx *
+b0 )
+bz (
+b0 '
+1&
+1%
+0$
+bz #
+0"
+bz !
+$end
+#50
+0%
+0&
+#100
+b0 *
+1%
+#150
+bx !
+bx (
+0%
+1$
+1&
+#200
+1"
+bx *
+1%
+#250
+bz !
+bz (
+0%
+0$
+#300
+0"
+bz *
+1%
+#350
+0%
+b10010 !
+b10010 (
+b10010 #
+#400
+b10010 *
+1%
+#450
+0%
+#500
+1%
+#550
+0%
+#600
+1%
+#650
+0%
+#700
+1%
+#750
+0%
+#800
+1%
+#850
+0%
+#900
+1%
+#950
+0%
+#1000
+1%
+#1050
+0%
+#1100
+1%
+#1150
+0%
+#1200
+1%
+#1250
+0%
+#1300
+1%
+#1350
+0%
+#1400
+1%
+#1450
+0%
+#1500
+1%
+#1550
+0%
+#1600
+1%
+#1650
+0%
+#1700
+1%
+#1750
+0%
+#1800
+1%
+#1850
+0%
+#1900
+1%
+#1950
+0%
+#2000
+1%
+#2050
+0%
+#2100
+1%
+#2150
+0%
+#2200
+1%
+#2250
+0%
+#2300
+1%
+#2350
+0%
