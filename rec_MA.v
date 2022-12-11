@@ -1,0 +1,43 @@
+// This is an implementation of a recursive moving average filter.
+
+module rec_MA
+(	
+	input clk, rst_n,
+	input[0:31] a,
+	output[0:31] y
+
+);
+parameter WINDOW_SIZE = 8;
+integer i;
+
+// storage for delay values and feedback value
+reg [0:32] delay_elements [0:WINDOW_SIZE - 1];
+reg [0:32] feedback_element;
+
+//wires for sums and multiplications
+wire [0:32] mult;
+wire [0:32] sub;
+
+//Combinational Part
+assign y = feedback_element + mult;
+assign mult = sub * 2;
+assign sub = a - delay_elements[WINDOW_SIZE-1];
+
+//Sequential Part
+always@(posedge clk)
+begin
+	if(!rst_n) begin
+		feedback_element = 32'b0;
+		for(i = 0; i < WINDOW_SIZE; i = i + 1) begin
+			delay_elements[i] <= 32'b0;
+		end
+	end
+
+	delay_elements[0] <= a;
+	for(i = 1; i < WINDOW_SIZE; i = i + 1) begin
+		delay_elements[i] <= delay_elements[i-1];
+	end
+	feedback_element <= y;
+end
+
+endmodule
