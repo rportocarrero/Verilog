@@ -3,3 +3,4 @@ work/
 *.mpf
 Counter/build/counter
 Counter/build/tb_counter.vcd
+ServoPWM/build/servoPWM
