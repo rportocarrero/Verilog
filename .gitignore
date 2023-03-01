@@ -1,3 +1,5 @@
 work/
 *.mti
 *.mpf
+Counter/build/counter
+Counter/build/tb_counter.vcd
